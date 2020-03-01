@@ -2,5 +2,10 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>zmt.jpg</file>
+        <file>black long.png</file>
+        <file>black short.png</file>
+        <file>red long.png</file>
+        <file>red short.png</file>
+        <file>clock.png</file>
     </qresource>
 </RCC>
