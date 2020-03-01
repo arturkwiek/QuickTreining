@@ -97,43 +97,33 @@ Window {
 
     Image {
         id: black_long
-        source: "./black long.png"
         x: clock.x + clock.width/2
         y: clock.y + clock.height/2 - height
+        source: "./black long.png"
         height: 70
-        rotation: 0
-        transformOrigin: Item.Bottom
+        rotation: 270
         fillMode: Image.PreserveAspectFit
+        transformOrigin: Item.Bottom
     }
 
     Image {
         id: black_short
         source: "./black short.png"
-        x: clock.x + clock.width/2
-        y: clock.y + clock.height/2 - height
         height: 50
-        rotation: 0
-        transformOrigin: Item.Bottom
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: red_long
         source: "./red long.png"
-        x: clock.x + clock.width/2
-        y: clock.y + clock.height/2 - height
         height: 70
-        transformOrigin: Item.Bottom
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: red_short
         source: "./red short.png"
-        x: clock.x + clock.width/2
-        y: clock.y + clock.height/2 - height
         height: 50
-        transformOrigin: Item.Bottom
         fillMode: Image.PreserveAspectFit
     }
 
