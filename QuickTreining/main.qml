@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
+import PropertyQml 1.0
 
 Window {
     visible: true
@@ -7,7 +8,29 @@ Window {
     height: 480
     color: "white"
 
+    PropertyQml {
+        id: propertyQml
+    }
+    MouseArea {
 
+        anchors.fill: parent
+        onClicked: propertyQml.valueToQML = "clicked"
+        Rectangle {
+            id: rect1
+            width: parent.width/2
+            height: parent.height/2
+
+            color: "lightblue"
+            Rectangle {
+                id: rect2
+                anchors.bottom: imgMinutes.bottom
+                //            bottom:  parent.bottom
+                anchors.left: imgMinutes.left
+                //            y: parent.bottom
+                width: 10
+                height: 10
+
+<<<<<<< HEAD
     Rectangle {
         id: rectBlue
         width: parent.width
@@ -16,8 +39,15 @@ Window {
 
         color: "lightblue"
         Component.onCompleted: console.log("rectangle")
+=======
+                color: "lightgreen"
 
+            }
+>>>>>>> connection with c++
+
+        }
         Rectangle {
+<<<<<<< HEAD
             id: white
             color: "white"
             width: parent.width/2
@@ -60,15 +90,41 @@ Window {
             opacity: 0.2
             color: "red"
             Component.onCompleted: console.log(x)
+=======
+            id: r3
+            width: 10
+            height: 10
+            color: "red"
+            anchors.centerIn: rect1
+        }
+        Text {
+            id: txtTime
+            text: propertyQml.valueToQML
+            anchors.centerIn: r3
+>>>>>>> connection with c++
         }
 
-
     }
+<<<<<<< HEAD
 
     //    Image {
     //        id: imgMinutes
     ////        x: 0
     ////        y: rect1.x + rect1.height
+=======
+
+    Image {
+        id: imgMinutes
+        //        x: 0
+        //        y: rect1.x + rect1.height
+
+        anchors {
+            //            left: 10
+            //            right: 0
+            //            top: 0
+            //            bottom: 0
+        }
+>>>>>>> connection with c++
 
     //        anchors {
     ////            left: 10
@@ -147,5 +203,9 @@ Window {
 
 
     }
+
+
+    Component.onCompleted: propertyQml.valueToQML =
+                           "QML to C++ Property Binding" // set the Value from QML to C++ using set Property
 
 }
