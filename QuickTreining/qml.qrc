@@ -1,11 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>zmt.jpg</file>
-        <file>black long.png</file>
-        <file>black short.png</file>
-        <file>red long.png</file>
-        <file>red short.png</file>
-        <file>clock.png</file>
+        <file>arrow.png</file>
+        <file>Rolex.png</file>
+        <file>arrow red.png</file>
+        <file>zmt.png</file>
     </qresource>
 </RCC>

@@ -30,16 +30,10 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-#    black long.png \
-#    black short.png \
-#    red long.png \
-#    red short.png \
-#    clock.png \
+    arrow red.png \
+    arrow.png \
+    Rolex.png \
+    zmt.png
 
-#    images/black long.png \
-#    images/black short.png \
-#    images/clock.png \
-#    images/red long.png \
-#    images/red short.png
-
-
+HEADERS += \
+    propertyqml.h
