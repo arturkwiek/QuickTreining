@@ -26,7 +26,6 @@ int main(int argc, char *argv[])
 //    }, Qt::QueuedConnection);
 //    engine.load(url);
 
-   qDebug() << "time: " << time.currentTime().hour();
     qDebug() << "time: " << time.currentTime().toString();
     propQml.setTimeToQML(time.currentTime().toString());
 emit propQml.timeToQMLChanged();

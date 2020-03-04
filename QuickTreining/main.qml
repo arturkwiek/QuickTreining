@@ -12,7 +12,7 @@ Window {
     PropertyQml {
         id: propertyQml
         onValueToQMLChanged: console.log(valueToQML)
-        onTimeToQMLChanged: console.log(timeToQML)
+//        onTimeToQMLChanged: console.log(timeToQML)
     }
     MouseArea {
 
@@ -62,7 +62,7 @@ Window {
 
     Image {        id: minutes
         source: "./arrow.png"
-        height: rolex.height/2
+        height: rolex.height*0.75
         fillMode: Image.PreserveAspectFit
         anchors.centerIn: rolex
 //        transform: Rotation {
@@ -77,15 +77,14 @@ Window {
 //        }
     }
 
-    Image {
-        id: hours
+    Image {        id: hours
         source: "./arrow.png"
-        height: rolex.height/4
+        height: rolex.height*0.5
         fillMode: Image.PreserveAspectFit
         anchors.centerIn: rolex
         transform: Rotation {
-            origin.x: hours.width/2
-            origin.y: hours.height/2
+//            origin.x: hours.width/2
+//            origin.y: hours.height/2
 //            RotationAnimation on angle {
 //                from: 0
 //                to: 360
@@ -112,17 +111,13 @@ Window {
 
         onTriggered: {
             var date = new Date()
-//            hours.rotation = Date().getHours().toPrecision(1)*(360/12).toPrecision(1)
-            console.log(date.getHours())
             hours.rotation = date.getHours()*30
             minutes.rotation = date.getMinutes() * 6
             seconds.rotation = date.getSeconds()* 6
             txtTime.text = date.toLocaleTimeString(Qt.locale("en_US"), "hh:mm:ss ap")
-//            txtTime.text = date.toLocaleDateString(Qt.locale("en_US"))
         }
     }
 
-    Component.onCompleted: propertyQml.valueToQML =
-                           "QML to C++ Property Binding" // set the Value from QML to C++ using set Property
+    Component.onCompleted: propertyQml.valueToQML = "Component.onCompleted QML to C++ Property Binding"
 
 }
