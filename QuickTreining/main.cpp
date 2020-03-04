@@ -1,9 +1,13 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QDebug>
+#include <QTime>
 #include "propertyqml.h"
 
 int main(int argc, char *argv[])
 {
+    QTime time;
+    PropertyQml propQml;
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);
@@ -21,6 +25,12 @@ int main(int argc, char *argv[])
 //            QCoreApplication::exit(-1);
 //    }, Qt::QueuedConnection);
 //    engine.load(url);
+
+   qDebug() << "time: " << time.currentTime().hour();
+    qDebug() << "time: " << time.currentTime().toString();
+    propQml.setTimeToQML(time.currentTime().toString());
+emit propQml.timeToQMLChanged();
+
 
     return app.exec();
 }
