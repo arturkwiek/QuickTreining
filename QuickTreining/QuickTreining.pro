@@ -33,7 +33,16 @@ DISTFILES += \
     arrow red.png \
     arrow.png \
     Rolex.png \
-    zmt.png
+    number_02.png \
+    number_03.png \
+    number_04.png \
+    number_05.png \
+    number_06.png \
+    number_07.png \
+    number_08.png \
+    number_09.png \
+    zmt.png \
+    number.png
 
 HEADERS += \
     propertyqml.h

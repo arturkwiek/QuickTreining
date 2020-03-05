@@ -25,3 +25,17 @@ QString PropertyQml::timeToQML() const {
     return _valueTime;
 
 }
+/*
+
+QVariantMap PropertyQml::get() const {
+    QVariantMap variantMap;
+    float min, max;
+    variantMap.insert("min", min);
+    variantMap.insert("max", max);
+    return variantMap;
+}
+
+var aa = get();
+aa.min
+
+*/
