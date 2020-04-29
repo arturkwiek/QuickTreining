@@ -8,6 +8,7 @@ Window {
     width: rolex.width
     height: rolex.height
     color: "white"
+    title: "Quick Rolex"
 
     PropertyQml { /* ================>*/        id: propertyQml
         onValueToQMLChanged: console.log(valueToQML)
@@ -55,15 +56,15 @@ Window {
         anchors.centerIn: rolex
     }
 
-    Image { /* ================>*/        id: zmt
-        source: "./zmt.png"
-        width: sourceSize.width/2
-        height: sourceSize.height/2
-        fillMode: Image.PreserveAspectFit
-        antialiasing: true
-        x: rolex.x + rolex.width / 2 - 4 * width / 2
-        y: rolex.y + rolex.height / 2 - height / 2
-    }
+//    Image { /* ================>*/        id: zmt
+//        source: "./zmt.png"
+//        width: sourceSize.width/2
+//        height: sourceSize.height/2
+//        fillMode: Image.PreserveAspectFit
+//        antialiasing: true
+//        x: rolex.x + rolex.width / 2 - 4 * width / 2
+//        y: rolex.y + rolex.height / 2 - height / 2
+//    }
 
     function p(x) {
         //        console.log(x);
@@ -179,7 +180,5 @@ Window {
         height: rolex.height*0.05
         fillMode: Image.PreserveAspectFit
     }
-
-    Component.onCompleted: propertyQml.valueToQML = "property t"
 
 }
